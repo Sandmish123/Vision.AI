@@ -1,0 +1,82 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Tracking Mouse</title>
+</head>
+<body>
+    <h1>Hand Tracking Mouse</h1>
+    <button id="trackHandButton">Track Hand</button>
+
+    <script>
+        document.getElementById('trackHandButton').addEventListener('click', function() {
+            fetch('/track_hand', { method: 'POST' })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to track hand');
+                    }
+                    alert('Hand tracking initiated successfully!');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Failed to track hand');
+                });
+        });
+    </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Tracking Mouse</title>
+</head>
+<body>
+    <h1>Hand Tracking Mouse</h1>
+    <button id="trackHandButton">Track Hand</button>
+    <button id="stopTrackingButton">Exit</button>
+
+    <script>
+        // Function to handle starting hand tracking
+        function startHandTracking() {
+            fetch('/track_hand', { method: 'POST' })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to track hand');
+                    }
+                    alert('Hand tracking initiated successfully!');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Failed to track hand');
+                });
+        }
+
+        // Function to handle stopping hand tracking
+        function stopHandTracking() {
+            fetch('/stop_tracking', { method: 'POST' })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to stop tracking');
+                    }
+                    alert('Hand tracking stopped successfully!');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Failed to stop tracking');
+                });
+        }
+
+        // Event listener for "Track Hand" button
+        document.getElementById('trackHandButton').addEventListener('click', startHandTracking);
+
+        // Event listener for "Exit" button
+        document.getElementById('stopTrackingButton').addEventListener('click', stopHandTracking);
+    </script>
+</body>
+</html>
