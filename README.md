@@ -1,7 +1,7 @@
 
-# Vision.ai
+# Vision.AI
 
-**Vision.ai** is a Flask-based web application that allows users to control their computer's mouse and click functionalities using hand gestures. It leverages the power of computer vision libraries such as OpenCV and MediaPipe to detect and track hand movements in real-time, mapping hand gestures to mouse actions.
+**Vision.AI** is a Flask-based web application that allows users to control their computer's mouse and click functionalities using hand gestures. It leverages the power of computer vision libraries such as OpenCV and MediaPipe to detect and track hand movements in real-time, mapping hand gestures to mouse actions.
 
 ## Features
 
@@ -11,12 +11,12 @@
 
 ## Installation
 
-To get started with **Vision.ai**, you'll need to clone this repository and install the necessary dependencies.
+To get started with **Vision.AI**, you'll need to clone this repository and install the necessary dependencies.
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/Sandmish123/Vision.ai.git
-    cd Vision.ai
+    git clone https://github.com/Sandmish123/Vision.AI.git
+    cd Vision.AI
     ```
 
 2. Create and activate a virtual environment (optional but recommended):
